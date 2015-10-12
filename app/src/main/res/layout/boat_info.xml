@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="6dip" >
+
+    <ImageView
+        android:id="@+id/boatInfoImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/modellInfoHeaderTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Modell: "
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/codeInfoHeaderTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/modellInfoHeaderTextView"
+        android:layout_below="@+id/modellInfoHeaderTextView"
+        android:text="Kod: "
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/nameInfoHeaderTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/codeInfoHeaderTextView"
+        android:layout_below="@+id/codeInfoHeaderTextView"
+        android:text="Namn: "
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/ownerInfoHeaderTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/nameInfoHeaderTextView"
+        android:layout_below="@+id/nameInfoHeaderTextView"
+        android:text="Ägare: "
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/countryInfoHeaderTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ownerInfoHeaderTextView"
+        android:layout_below="@+id/ownerInfoHeaderTextView"
+        android:text="Land: "
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/modellInfoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/modellInfoHeaderTextView"
+        android:layout_alignBottom="@+id/modellInfoHeaderTextView"
+        android:layout_toRightOf="@+id/modellInfoHeaderTextView"
+        android:text="TextView"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/codeInfoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/codeInfoHeaderTextView"
+        android:layout_alignLeft="@+id/modellInfoTextView"
+        android:layout_below="@+id/modellInfoTextView"
+        android:text="TextView"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/nameInfoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/nameInfoHeaderTextView"
+        android:layout_alignLeft="@+id/codeInfoTextView"
+        android:layout_below="@+id/codeInfoTextView"
+        android:text="TextView"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/ownerInfoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ownerInfoHeaderTextView"
+        android:layout_alignLeft="@+id/nameInfoTextView"
+        android:layout_below="@+id/nameInfoTextView"
+        android:text="TextView"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/countryInfoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/countryInfoHeaderTextView"
+        android:layout_alignLeft="@+id/ownerInfoTextView"
+        android:layout_below="@+id/ownerInfoTextView"
+        android:text="TextView"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+</RelativeLayout>

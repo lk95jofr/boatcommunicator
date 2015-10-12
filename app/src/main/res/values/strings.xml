@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">BoatCommunicator</string>
+    <string name="search_boat">Sök båt</string>
+    <string name="boat_modell">Modell</string>
+    <string name="action_settings">Settings</string>
+</resources>

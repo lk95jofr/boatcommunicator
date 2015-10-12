@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="6dip" >
+
+    <ImageView
+        android:id="@+id/boatSearchImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/modellSearchHeaderTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/boatSearchImageView"
+        android:layout_below="@+id/boatSearchImageView"
+        android:text="@string/boat_modell"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/modellSearchTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/boatSearchImageView"
+        android:layout_toRightOf="@+id/modellSearchHeaderTextView"
+        android:layout_alignBaseline="@+id/modellSearchHeaderTextView"
+        android:layout_alignBottom="@+id/modellSearchHeaderTextView"
+        android:text="TextView"
+        android:paddingLeft="5dp"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/ownerSearchTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/boatSearchImageView"
+        android:layout_toRightOf="@+id/modellSearchHeaderTextView"
+        android:layout_alignBaseline="@+id/modellSearchHeaderTextView"
+        android:layout_alignBottom="@+id/modellSearchHeaderTextView"
+        android:text="TextView"
+        android:paddingLeft="5dp"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+</RelativeLayout>
