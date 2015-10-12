@@ -42,10 +42,24 @@ public class MainActivity extends Activity {
         Cursor cursor = dbHelper.fetchAllBoats();
 
         // The desired columns to be bound
-        String[] columns = new String[] {DbAdapter.BOAT_MODELL};
+        String[] columns = new String[] {
+                DbAdapter.BOAT_MODELL,
+                DbAdapter.BOAT_NAME,
+                DbAdapter.COUNTRY,
+                DbAdapter.OWNER,
+                DbAdapter.PHONE,
+                DbAdapter.EMAIL
+        };
 
         // the XML defined views which the data will be bound to
-        int[] to = new int[] {R.id.modellSearchTextView};
+        int[] toXmlView = new int[] {
+                R.id.modellSearchTextView,
+                R.id.boatNameSearchTextView,
+                R.id.countrySearchTextView,
+                R.id.ownerSearchTextView,
+                R.id.phoneSearchTextView,
+                R.id.emailSearchTextView
+        };
 
         // create the adapter using the cursor pointing to the desired data
         //as well as the layout information
@@ -53,7 +67,7 @@ public class MainActivity extends Activity {
                 this, R.layout.search_result,
                 cursor,
                 columns,
-                to,
+                toXmlView,
                 0);
 
         ListView listView = (ListView) findViewById(R.id.mainListView);

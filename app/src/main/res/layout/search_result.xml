@@ -14,23 +14,30 @@
         android:src="@mipmap/ic_launcher" />
 
     <TextView
-        android:id="@+id/modellSearchHeaderTextView"
+        android:id="@+id/modellSearchTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/boatSearchImageView"
         android:layout_below="@+id/boatSearchImageView"
-        android:text="@string/boat_modell"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:text="modell"
+        android:paddingLeft="5dp"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <TextView
-        android:id="@+id/modellSearchTextView"
+        android:id="@+id/boatNameSearchTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/boatSearchImageView"
-        android:layout_toRightOf="@+id/modellSearchHeaderTextView"
-        android:layout_alignBaseline="@+id/modellSearchHeaderTextView"
-        android:layout_alignBottom="@+id/modellSearchHeaderTextView"
-        android:text="TextView"
+        android:layout_below="@+id/modellSearchTextView"
+        android:text="boatname"
+        android:paddingLeft="5dp"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/countrySearchTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/boatNameSearchTextView"
+        android:text="country"
         android:paddingLeft="5dp"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
@@ -38,11 +45,26 @@
         android:id="@+id/ownerSearchTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/boatSearchImageView"
-        android:layout_toRightOf="@+id/modellSearchHeaderTextView"
-        android:layout_alignBaseline="@+id/modellSearchHeaderTextView"
-        android:layout_alignBottom="@+id/modellSearchHeaderTextView"
-        android:text="TextView"
+        android:layout_below="@+id/countrySearchTextView"
+        android:text="owner"
+        android:paddingLeft="5dp"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/phoneSearchTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ownerSearchTextView"
+        android:text="phone"
+        android:paddingLeft="5dp"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/emailSearchTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/phoneSearchTextView"
+        android:text="email"
         android:paddingLeft="5dp"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
