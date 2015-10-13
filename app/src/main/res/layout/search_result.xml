@@ -1,71 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="6dip" >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <ImageView
         android:id="@+id/boatSearchImageView"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:src="@mipmap/ic_launcher" />
 
-    <TextView
-        android:id="@+id/modellSearchTextView"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/boatSearchImageView"
-        android:layout_below="@+id/boatSearchImageView"
-        android:text="modell"
-        android:paddingLeft="5dp"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+        android:orientation="horizontal"
+        android:padding="5dp">
 
-    <TextView
-        android:id="@+id/boatNameSearchTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/modellSearchTextView"
-        android:text="boatname"
-        android:paddingLeft="5dp"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:layout_weight="1">
 
-    <TextView
-        android:id="@+id/countrySearchTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/boatNameSearchTextView"
-        android:text="country"
-        android:paddingLeft="5dp"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+            <TextView
+                android:id="@+id/typOfBoatSearchTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="type of boat"
+                android:paddingLeft="5dp"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
 
-    <TextView
-        android:id="@+id/ownerSearchTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/countrySearchTextView"
-        android:text="owner"
-        android:paddingLeft="5dp"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+            <TextView
+                android:id="@+id/modellSearchTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="modell"
+                android:paddingLeft="5dp"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
 
-    <TextView
-        android:id="@+id/phoneSearchTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/ownerSearchTextView"
-        android:text="phone"
-        android:paddingLeft="5dp"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+            <TextView
+                android:id="@+id/sailNrSearchTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sail number"
+                android:paddingLeft="5dp"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
 
-    <TextView
-        android:id="@+id/emailSearchTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/phoneSearchTextView"
-        android:text="email"
-        android:paddingLeft="5dp"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+            <TextView
+                android:id="@+id/boatNameSearchTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="boatname"
+                android:paddingLeft="5dp"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
 
-</RelativeLayout>
+            <TextView
+                android:id="@+id/harbourSearchTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="harbour"
+                android:paddingLeft="5dp"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/kryssarKlubbenSearchTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="kryssar klubben"
+                android:paddingLeft="5dp"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/ownerSearchTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="owner"
+                android:paddingLeft="5dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+            <TextView
+                android:id="@+id/phoneSearchTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="phone"
+                android:paddingLeft="5dp"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/emailSearchTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="email"
+                android:paddingLeft="5dp"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/countrySearchTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="country"
+                android:paddingLeft="5dp"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/seaRescueSearchTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sea rescue"
+                android:paddingLeft="5dp"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

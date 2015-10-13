@@ -21,7 +21,7 @@ public class DbAdapter {
     public static final String BOAT_MODELL     = "boatModell";     // Maxi 77
     public static final String SAIL_NUMBER     = "sailNumber";     // 1003
     public static final String BOAT_NAME       = "boatName";       // bettan
-    public static final String HARBOR          = "harbor";         // björksalavarv
+    public static final String HARBOUR         = "harbour";        // björksalavarv
     public static final String KRYSSAR_KLUBBEN = "kryssarKlubben"; // 182734
     public static final String SEA_RESCUE      = "seaRescue";      // 858w63
     public static final String OWNER           = "owner";          // Fredrik
@@ -29,6 +29,7 @@ public class DbAdapter {
     public static final String PHONE           = "phone";          // 070-1234567
     public static final String COUNTRY         = "country";        // Sverige
     public static final String FAVORITE        = "favorite";       // true / false
+    public static final String MY_BOAT         = "myBoat";         // true / false
 //    public static final String IMAGE           = "image";
     public static final String MODIFIED        = "modified";
     public static final String CREATED         = "created";
@@ -51,7 +52,7 @@ public class DbAdapter {
                     BOAT_MODELL     + " text not null," +
                     SAIL_NUMBER     + " text," +
                     BOAT_NAME       + " text ," +
-                    HARBOR          + " text not null," +
+                    HARBOUR + " text not null," +
                     KRYSSAR_KLUBBEN + " text," +
                     SEA_RESCUE      + " text," +
                     OWNER           + " text not null," +
@@ -59,6 +60,7 @@ public class DbAdapter {
                     PHONE           + " text," +
                     COUNTRY         + " text not null," +
                     FAVORITE        + " text," +
+                    MY_BOAT         + " text," +
 //                    IMAGE           + " blob," +
                     MODIFIED        + " text not null," +
                     CREATED         + " text not null);";
@@ -113,14 +115,15 @@ public class DbAdapter {
                            String email,
                            String phone,
                            String country,
-                           String favorite) {
+                           String favorite,
+                           String myBoat) {
 
         ContentValues initialValues = new ContentValues();
         initialValues.put(TYPE_OF_BOAT, typeOfBoat);
         initialValues.put(BOAT_MODELL, boatModell);
         initialValues.put(SAIL_NUMBER, sailNumber);
         initialValues.put(BOAT_NAME, boatName);
-        initialValues.put(HARBOR, harbor);
+        initialValues.put(HARBOUR, harbor);
         initialValues.put(KRYSSAR_KLUBBEN, kryssarKlubben);
         initialValues.put(SEA_RESCUE, seaRescue);
         initialValues.put(OWNER, owner);
@@ -156,21 +159,21 @@ public class DbAdapter {
 
         if (inputText == null || inputText.trim().length() == 0)  {
             mCursor = mDb.query(BOAT_DATA, new String[] {
-                            ROWID, TYPE_OF_BOAT, BOAT_MODELL, SAIL_NUMBER, BOAT_NAME, HARBOR, KRYSSAR_KLUBBEN, SEA_RESCUE,
-                            OWNER, EMAIL, PHONE, COUNTRY, FAVORITE, MODIFIED, CREATED},
+                            ROWID, TYPE_OF_BOAT, BOAT_MODELL, SAIL_NUMBER, BOAT_NAME, HARBOUR, KRYSSAR_KLUBBEN, SEA_RESCUE,
+                            OWNER, EMAIL, PHONE, COUNTRY, FAVORITE, MY_BOAT, MODIFIED, CREATED},
                     null, null, null, null, null);
 
         } else {
             String[] columns = new String[] {
-                    ROWID, TYPE_OF_BOAT, BOAT_MODELL, SAIL_NUMBER, BOAT_NAME, HARBOR, KRYSSAR_KLUBBEN, SEA_RESCUE,
-                    OWNER, EMAIL, PHONE, COUNTRY, FAVORITE, MODIFIED, CREATED};
+                    ROWID, TYPE_OF_BOAT, BOAT_MODELL, SAIL_NUMBER, BOAT_NAME, HARBOUR, KRYSSAR_KLUBBEN, SEA_RESCUE,
+                    OWNER, EMAIL, PHONE, COUNTRY, FAVORITE, MY_BOAT, MODIFIED, CREATED};
 /*
             String selection =
                     "(" + TYPE_OF_BOAT + " like '%" + inputText + "%') or " +
                             "(" + BOAT_MODELL + " like '%" + inputText + "%') or " +
                             "(" + SAIL_NUMBER + " like '%" + inputText + "%') or " +
                             "(" + BOAT_NAME + " like '%" + inputText + "%') or " +
-                            "(" + HARBOR + " like '%" + inputText + "%') or " +
+                            "(" + HARBOUR + " like '%" + inputText + "%') or " +
                             "(" + KRYSSAR_KLUBBEN + " like '%" + inputText + "%') or " +
                             "(" + SEA_RESCUE + " like '%" + inputText + "%') or " +
                             "(" + OWNER + " like '%" + inputText + "%') or " +
@@ -199,15 +202,15 @@ public class DbAdapter {
     }
 
     public void insertSomeBoats() {
-        createBoat("Segelbåt", "Maxi 77", "1003", "Bettan", "Björksalavarv", "", "", "Fredrik0", "freddan@email", "070-123456", "Sverige", "true");
-        createBoat("Segelbåt", "Maxi 77", "1004", "Bettan", "Björksalavarv", "1234", "", "Fredrik1", "freddan@email", "070-123456", "Sverige", "true");
-        createBoat("Segelbåt", "Maxi 77", "1005", "Bettan", "Björksalavarv", "", "", "Fredrik2", "freddan@email", "070-123456", "Sverige", "true");
-        createBoat("Segelbåt", "Maxi 77", "1006", "Bettan", "Björksalavarv", "", "", "Fredrik3", "freddan@email", "070-123456", "Sverige", "true");
-        createBoat("Segelbåt", "Maxi 77", "1107", "Bettan", "Björksalavarv", "", "", "Fredrik4", "freddan@email", "070-123456", "Sverige", "true");
-        createBoat("Segelbåt", "Maxi 77", "1203", "Bettan", "Björksalavarv", "", "a2ef45", "Fredrik5", "freddan@email", "070-123456", "Sverige", "true");
-        createBoat("Segelbåt", "Maxi 77", "1303", "Bettan", "Björksalavarv", "", "", "Fredrik6", "freddan@email", "070-123456", "Sverige", "true");
-        createBoat("Segelbåt", "Maxi 77", "1403", "Bettan", "Björksalavarv", "", "", "Fredrik7", "freddan@email", "070-123456", "Sverige", "true");
-        createBoat("Segelbåt", "Maxi 77", "1503", "Bettan", "Björksalavarv", "", "", "Fredrik8", "freddan@email", "070-123456", "Sverige", "true");
-        createBoat("Segelbåt", "Maxi 77", "1603", "Bettan", "Björksalavarv", "", "", "Fredrik9", "freddan@email", "070-123456", "Sverige", "true");
+        createBoat("Segelbåt", "Maxi 77", "1003", "Bettan", "Björksalavarv", "", "", "Fredrik0", "freddan@email", "070-123456", "Sverige", "true", "true");
+        createBoat("Segelbåt", "Maxi 84", "1004", "Bettan", "Björksalavarv", "1234", "", "Fredrik1", "freddan@email", "070-123456", "Sverige", "true", "false");
+        createBoat("Segelbåt", "Maxi 77", "1005", "Bettan", "Björksalavarv", "", "", "Fredrik2", "freddan@email", "070-123456", "Sverige", "true", "false");
+        createBoat("Motorbåt", "Aquador", "1006", "Bettan", "Björksalavarv", "", "", "Fredrik3", "freddan@email", "070-123456", "Sverige", "true", "false");
+        createBoat("Motorbåt", "Store bro", "1107", "Bettan", "Björksalavarv", "", "", "Fredrik4", "freddan@email", "070-123456", "Sverige", "true", "false");
+        createBoat("Motorbåt", "Princess", "1203", "Bettan", "Björksalavarv", "", "a2ef45", "Fredrik5", "freddan@email", "070-123456", "Sverige", "true", "false");
+        createBoat("Motorbåt", "Monark", "1303", "Bettan", "Björksalavarv", "", "", "Fredrik6", "freddan@email", "070-123456", "Sverige", "true", "false");
+        createBoat("Segelbåt", "Albin Express", "1403", "Bettan", "Björksalavarv", "", "", "Fredrik7", "freddan@email", "070-123456", "Sverige", "true", "false");
+        createBoat("Segelbåt", "Elan", "1503", "Bettan", "Björksalavarv", "", "", "Fredrik8", "freddan@email", "070-123456", "Sverige", "true", "false");
+        createBoat("Segelbåt", "Maxi 95", "1603", "Bettan", "Björksalavarv", "", "", "Fredrik9", "freddan@email", "070-123456", "Sverige", "true", "false");
     }
 }

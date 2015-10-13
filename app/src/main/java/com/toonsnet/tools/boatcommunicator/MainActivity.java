@@ -43,22 +43,32 @@ public class MainActivity extends Activity {
 
         // The desired columns to be bound
         String[] columns = new String[] {
+                DbAdapter.TYPE_OF_BOAT,
                 DbAdapter.BOAT_MODELL,
+                DbAdapter.SAIL_NUMBER,
                 DbAdapter.BOAT_NAME,
-                DbAdapter.COUNTRY,
+                DbAdapter.HARBOUR,
                 DbAdapter.OWNER,
                 DbAdapter.PHONE,
-                DbAdapter.EMAIL
+                DbAdapter.EMAIL,
+                DbAdapter.COUNTRY,
+                DbAdapter.KRYSSAR_KLUBBEN,
+                DbAdapter.SEA_RESCUE
         };
 
         // the XML defined views which the data will be bound to
         int[] toXmlView = new int[] {
+                R.id.typOfBoatSearchTextView,
                 R.id.modellSearchTextView,
+                R.id.sailNrSearchTextView,
                 R.id.boatNameSearchTextView,
-                R.id.countrySearchTextView,
+                R.id.harbourSearchTextView,
                 R.id.ownerSearchTextView,
                 R.id.phoneSearchTextView,
-                R.id.emailSearchTextView
+                R.id.emailSearchTextView,
+                R.id.countrySearchTextView,
+                R.id.kryssarKlubbenSearchTextView,
+                R.id.seaRescueSearchTextView
         };
 
         // create the adapter using the cursor pointing to the desired data
